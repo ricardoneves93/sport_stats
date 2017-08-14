@@ -10,7 +10,11 @@ def get_results_by_team(team_name):
 	search_dict = {'$or': [{'homeTeam': team_name}, {'awayTeam': team_name}]}
 	return db.football_stats.find(search_dict)
 
-def get_team_matches_played(team_name):
+def get_matches_played_by_team(team_name):
+	search_dict = {'$or': [{'homeTeam': team_name}, {'awayTeam': team_name}]}
+	return db.football_stats.count(search_dict)
+
+def get_matches_played_by_team(team_name):
 	search_dict = {'$or': [{'homeTeam': team_name}, {'awayTeam': team_name}]}
 	return db.football_stats.count(search_dict)
 

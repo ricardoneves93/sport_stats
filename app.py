@@ -45,17 +45,11 @@ def empty_database():
 	db.football_stats.delete_many({})
 
 # Delete all old data
-#empty_database()
+empty_database()
 
 # Get new data
-#for league_name, league_id in leagues:
-#	get_league_fixtures(league_id)
+for league_name, league_id in leagues:
+	get_league_fixtures(league_id)
 
-
-print(queries.get_team_scored_goals("SL Benfica"))
-print(queries.get_team_received_goals("SL Benfica"))
-print(queries.get_team_number_victories("SL Benfica"))
-print(queries.get_team_number_defeats("SL Benfica"))
-print(queries.get_team_number_draws("SL Benfica"))
 
 
